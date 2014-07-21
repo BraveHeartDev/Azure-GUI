@@ -13,6 +13,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSShadow *shadow = [[NSShadow alloc] init];
+    [shadow setShadowOffset:CGSizeMake(1.0f, 1.0f)];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       [UIFont fontWithName:@"Arial" size:12.0f], NSFontAttributeName,
+                                                       [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                       shadow, NSShadowAttributeName,
+                                                       nil] forState:UIControlStateNormal];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       [UIFont fontWithName:@"Arial" size:25.0f], NSFontAttributeName,
+                                                       [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                       shadow, NSShadowAttributeName,
+                                                       nil]];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.window.bounds.size.width, 20)];
+    view.backgroundColor = [UIColor colorWithRed:0.0f green:127.0f/255.0f blue:1.0f alpha:1.0f];
+    [self.window.rootViewController.view addSubview:view];
     return YES;
 }
 							
