@@ -31,8 +31,8 @@
     // Do any additional setup after loading the view.
     self.navigationController.delegate = self;
     
-    addressField.text = [NSString stringWithUTF8String:data.address];
-    valueField.text = [NSString stringWithUTF8String:data.value];
+    addressField.text = data.address;
+    valueField.text = data.value;
     [lockedSwitch setOn:data.locked animated:YES];
 }
 
@@ -73,6 +73,15 @@
     if([viewController isKindOfClass:[AZSearchViewController class]])
     {
         self.navigationController.delegate = ((AZSearchViewController*)viewController);
+        
+        AddressObject Address;
+        Address.address = (__bridge NSString *)((__bridge_retained void *)addressField.text);
+        Address.value = (__bridge NSString *)((__bridge_retained void *)valueField.text);
+        Address.locked = lockedSwitch.isOn;
+        
+        [((AZSearchViewController*)viewController).foundAddresses replaceObjectAtIndex:((AZSearchViewController*)viewController).rowNumber.row withObject:[NSValue valueWithBytes:&Address objCType:@encode(AddressObject)]];
+        
+        [((AZSearchViewController*)viewController).table reloadData];
     }
 }
 /*

@@ -37,58 +37,58 @@
     foundAddresses = [[NSMutableArray alloc] init];
     
     AddressObject Address;
-    Address.address = "0x10000000";
-    Address.value = "435";
+    Address.address = @"0x10000000";
+    Address.value = @"435";
     Address.locked = true;
     
     AddressObject Address2;
-    Address2.address = "0x10000004";
-    Address2.value = "435";
+    Address2.address = @"0x10000004";
+    Address2.value = @"435";
     Address2.locked = false;
     
     AddressObject Address3;
-    Address3.address = "0x10000008";
-    Address3.value = "435";
+    Address3.address = @"0x10000008";
+    Address3.value = @"435";
     Address3.locked = true;
     
     AddressObject Address4;
-    Address4.address = "0x1000000C";
-    Address4.value = "435";
+    Address4.address = @"0x1000000C";
+    Address4.value = @"435";
     Address4.locked = false;
     
     AddressObject Address5;
-    Address5.address = "0x10000010";
-    Address5.value = "435";
+    Address5.address = @"0x10000010";
+    Address5.value = @"435";
     Address5.locked = false;
     
     AddressObject Address6;
-    Address6.address = "0x10000014";
-    Address6.value = "435";
+    Address6.address = @"0x10000014";
+    Address6.value = @"435";
     Address6.locked = true;
     
     AddressObject Address7;
-    Address7.address = "0x10000018";
-    Address7.value = "435";
+    Address7.address = @"0x10000018";
+    Address7.value = @"435";
     Address7.locked = false;
     
     AddressObject Address8;
-    Address8.address = "0x1000001C";
-    Address8.value = "435";
+    Address8.address = @"0x1000001C";
+    Address8.value = @"435";
     Address8.locked = false;
     
     AddressObject Address9;
-    Address9.address = "0x10000020";
-    Address9.value = "435";
+    Address9.address = @"0x10000020";
+    Address9.value = @"435";
     Address9.locked = false;
     
     AddressObject Address10;
-    Address10.address = "0x10000024";
-    Address10.value = "435";
+    Address10.address = @"0x10000024";
+    Address10.value = @"435";
     Address10.locked = false;
     
     AddressObject Address11;
-    Address11.address = "0x10000028";
-    Address11.value = "435";
+    Address11.address = @"0x10000028";
+    Address11.value = @"435";
     Address11.locked = true;
     
     [foundAddresses addObject:[NSValue valueWithBytes:&Address objCType:@encode(AddressObject)]];
@@ -182,14 +182,14 @@
     
     UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 14.0 ];
     cell.textLabel.font  = myFont;
-    cell.textLabel.text = [NSString stringWithUTF8String:Address.address];
+    cell.textLabel.text = Address.address;
     
     UIView *vertLine = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width * 3/4, 0, 1, 40)];
     vertLine.backgroundColor = [UIColor colorWithRed:0.0f green:127.0f/255.0f blue:1.0f alpha:1.0f];
     [cell.contentView addSubview:vertLine];
     
     UILabel *Value = [[UILabel alloc]initWithFrame:CGRectMake((self.view.bounds.size.width * 3/4) + 10, 0, (self.view.bounds.size.width * 1/4) - 10, 40)];
-    Value.text = [NSString stringWithUTF8String:Address.value];
+    Value.text = Address.value;
     Value.tag = 1111;
     [cell.contentView addSubview:Value];
     
@@ -255,8 +255,8 @@
     
     AZEditViewController *controller = [segue destinationViewController];
     AddressObject data;
-    data.address = [rowTitle UTF8String];
-    data.value = [rowValue UTF8String];
+    data.address = rowTitle;
+    data.value = rowValue;
     data.locked = rowLocked;
     
     controller.data = data;

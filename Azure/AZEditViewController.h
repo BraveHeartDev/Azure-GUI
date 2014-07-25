@@ -10,8 +10,8 @@
 
 typedef struct AddressObject
 {
-    const char *address;
-    const char *value;
+    __unsafe_unretained NSString *address;
+    __unsafe_unretained NSString *value;
     BOOL locked;
 }AddressObject;
 

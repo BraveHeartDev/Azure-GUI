@@ -42,6 +42,7 @@
 		E7163ADB1972277000E273C4 /* AZSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZSearchViewController.m; sourceTree = "<group>"; };
 		E7163B09197BF72000E273C4 /* AZEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZEditViewController.h; sourceTree = "<group>"; };
 		E7163B0A197BF72000E273C4 /* AZEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZEditViewController.m; sourceTree = "<group>"; };
+		E79AF63B198210000051CD5B /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		E7BE6E3E19720B2200A0D117 /* Azure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Azure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BE6E4119720B2200A0D117 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7BE6E4319720B2200A0D117 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +177,7 @@
 		E7BE6E4819720B2200A0D117 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E79AF63B198210000051CD5B /* Global.h */,
 				E7BE6E4919720B2200A0D117 /* Azure-Info.plist */,
 				E7BE6E4A19720B2200A0D117 /* InfoPlist.strings */,
 				E7BE6E4D19720B2200A0D117 /* main.m */,
